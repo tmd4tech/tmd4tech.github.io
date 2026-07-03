@@ -1,0 +1,20 @@
+{
+  "groups": [
+    {
+      "group": "Programming & Analytics",
+      "items": ["Python", "SQL", "R", "Machine Learning", "Predictive Modelling", "Time-Series Analysis"]
+    },
+    {
+      "group": "Geospatial & Visualization",
+      "items": ["ArcGIS", "QGIS", "GeoPandas", "Power BI", "GIS Dashboards", "Spatial Analytics"]
+    },
+    {
+      "group": "Data & Research",
+      "items": ["Statistical Analysis", "Monitoring & Evaluation", "Research Methods", "Literature Review", "Research Reporting"]
+    },
+    {
+      "group": "Domain",
+      "items": ["Energy Access", "Renewable Energy Systems", "Sustainable Development", "Climate Data Analytics"]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "role_line": "Data Scientist · Energy-Access Researcher · Power Systems",
+  "paragraphs": [
+    "I work at the seam where machine learning, geospatial analytics, and power-systems engineering meet — a place where a well-chosen model or a carefully built map can change which communities get electricity and how resilient that electricity is to a changing climate. My work turns large-scale energy datasets into evidence that planners, funders, and utilities can act on.",
+    "Most of what I do begins with a spatial question: where are people underserved, what would it cost to reach them, and how do we build systems that keep working after the ribbon is cut? To answer these, I build predictive models, optimization pipelines, and GIS tools — then translate the results into research outputs and dashboards that hold up in a stakeholder meeting, not just a notebook.",
+    "My foundation is deliberately hybrid. I hold an M.S. in Electrical & Computer Engineering from Carnegie Mellon University Africa, with a concentration in Applied Machine Learning, Data Analytics, and Intelligent Systems, and a B.Eng. in Electrical & Electronics Engineering from the Federal University of Technology, Minna, concentrating in Control and Energy Systems. The engineering grounds the data science: I know what the numbers mean when the grid is on the other end of them.",
+    "That combination is the point. Energy access is not only a modelling problem or only an infrastructure problem — it is both at once, and it lives on a map. I built my training so I could hold all three at the same time."
+  ],
+  "facts": [
+    { "label": "Based in", "value": "Berlin & Kigali" },
+    { "label": "Focus", "value": "Energy access · Climate resilience" },
+    { "label": "2026 papers", "value": "3 accepted (IEEE Xplore, IJCAI)" },
+    { "label": "CGPA", "value": "3.79 / 4.00 — CMU Africa" }
+  ],
+  "education": [
+    {
+      "degree": "M.S., Electrical & Computer Engineering",
+      "school": "Carnegie Mellon University Africa",
+      "dates": "Aug 2025 – May 2026",
+      "detail": "Concentration: Applied Machine Learning, Data Analytics, Intelligent Systems · CGPA 3.79/4.00"
+    },
+    {
+      "degree": "B.Eng., Electrical & Electronics Engineering",
+      "school": "Federal University of Technology, Minna",
+      "dates": "Jan 2019 – Feb 2025",
+      "detail": "Concentration: Control Systems, Energy Systems"
+    }
+  ]
+}

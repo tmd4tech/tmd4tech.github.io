@@ -1,0 +1,173 @@
+# ═══════════════════════════════════════════════════════════════
+#  ADMIN CONFIG (Decap CMS)
+#  This file defines every editable field in the admin panel at /admin.
+#  When you save in the admin UI, Decap commits the change to your
+#  GitHub repo, which triggers a rebuild — so edits actually persist.
+#
+#  ── BEFORE FIRST USE, edit the two lines marked  <-- EDIT  below. ──
+# ═══════════════════════════════════════════════════════════════
+
+backend:
+  name: github
+  repo: USERNAME/REPO          # <-- EDIT: e.g. temidayo/temidayo.github.io
+  branch: main
+  # Login needs a small OAuth broker (free). See README "Admin login".
+  base_url: https://YOUR-OAUTH-BROKER.example.com   # <-- EDIT after setup
+
+# Where uploaded images go (used if you add image fields later)
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
+
+# Nicer editing: shows a live-ish preview pane
+publish_mode: simple
+
+collections:
+  # ── Site settings ──────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General"
+        file: "src/data/settings.json"
+        fields:
+          - { name: title, label: "Full name", widget: string }
+          - { name: tagline, label: "Tagline", widget: string }
+          - { name: description, label: "Description", widget: text }
+          - { name: email, label: "Email", widget: string }
+          - { name: phone, label: "Phone", widget: string }
+          - name: links
+            label: "Links"
+            widget: object
+            fields:
+              - { name: linkedin, label: "LinkedIn URL", widget: string, required: false }
+              - { name: scholar, label: "Google Scholar URL", widget: string, required: false }
+              - { name: github, label: "GitHub URL", widget: string, required: false }
+
+  # ── About ──────────────────────────────────────────────────
+  - name: "about"
+    label: "About Section"
+    files:
+      - name: "about"
+        label: "About content"
+        file: "src/data/about.json"
+        fields:
+          - { name: role_line, label: "Role line (under name)", widget: string }
+          - name: paragraphs
+            label: "About paragraphs"
+            widget: list
+            field: { name: text, label: "Paragraph", widget: text }
+          - name: facts
+            label: "Quick facts"
+            widget: list
+            fields:
+              - { name: label, label: "Label", widget: string }
+              - { name: value, label: "Value", widget: string }
+          - name: education
+            label: "Education"
+            widget: list
+            fields:
+              - { name: degree, label: "Degree", widget: string }
+              - { name: school, label: "School", widget: string }
+              - { name: dates, label: "Dates", widget: string }
+              - { name: detail, label: "Detail", widget: text }
+
+  # ── Experience ─────────────────────────────────────────────
+  - name: "experience"
+    label: "Experience"
+    files:
+      - name: "experience"
+        label: "Roles"
+        file: "src/data/experience.json"
+        fields:
+          - name: roles
+            label: "Roles"
+            widget: list
+            fields:
+              - { name: role, label: "Role title", widget: string }
+              - { name: org, label: "Organization", widget: string }
+              - { name: location, label: "Location", widget: string }
+              - { name: dates, label: "Dates", widget: string }
+              - { name: summary, label: "Summary", widget: text }
+              - name: points
+                label: "Bullet points"
+                widget: list
+                field: { name: point, label: "Point", widget: text }
+
+  # ── Skills ─────────────────────────────────────────────────
+  - name: "skills"
+    label: "Skills"
+    files:
+      - name: "skills"
+        label: "Skill groups"
+        file: "src/data/skills.json"
+        fields:
+          - name: groups
+            label: "Groups"
+            widget: list
+            fields:
+              - { name: group, label: "Group name", widget: string }
+              - name: items
+                label: "Skills"
+                widget: list
+                field: { name: item, label: "Skill", widget: string }
+
+  # ── Recognition ────────────────────────────────────────────
+  - name: "recognition"
+    label: "Awards & Certifications"
+    files:
+      - name: "recognition"
+        label: "Recognition"
+        file: "src/data/recognition.json"
+        fields:
+          - name: leadership
+            label: "Leadership & Awards"
+            widget: list
+            field: { name: item, label: "Item", widget: text }
+          - name: certifications
+            label: "Certifications"
+            widget: list
+            field: { name: item, label: "Certification", widget: string }
+
+  # ── Publications (each is its own file — add/remove freely) ──
+  - name: "publications"
+    label: "Publications"
+    label_singular: "Publication"
+    folder: "src/content/publications"
+    create: true
+    slug: "{{order}}-{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: authors, label: "Authors", widget: string }
+      - { name: venue, label: "Venue", widget: string }
+      - { name: proceedings, label: "Proceedings", widget: string, required: false }
+      - { name: status, label: "Status", widget: select, options: ["Accepted", "Published", "Under review", "In preparation"], default: "Accepted" }
+      - { name: year, label: "Year", widget: number, value_type: int, default: 2026 }
+      - { name: order, label: "Display order (lower = first)", widget: number, value_type: int, default: 1 }
+      - { name: link, label: "Link (DOI / PDF)", widget: string, default: "#" }
+      - name: tags
+        label: "Tags"
+        widget: list
+        field: { name: tag, label: "Tag", widget: string }
+      - { name: body, label: "Abstract / summary", widget: text }
+
+  # ── Projects (each is its own file) ────────────────────────
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{order}}-{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: subtitle, label: "Subtitle", widget: string }
+      - { name: order, label: "Display order (lower = first)", widget: number, value_type: int, default: 1 }
+      - name: stack
+        label: "Tech stack"
+        widget: list
+        field: { name: tech, label: "Technology", widget: string }
+      - { name: link, label: "Link", widget: string, default: "#" }
+      - { name: body, label: "Case study (Markdown)", widget: markdown }

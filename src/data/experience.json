@@ -1,0 +1,28 @@
+{
+  "roles": [
+    {
+      "role": "Energy Access Researcher",
+      "org": "Access to Energy Institute (A2EI)",
+      "location": "Berlin, Germany",
+      "dates": "May 2026 – Present",
+      "summary": "Working on the data backbone of electrification planning — turning continent-scale geospatial and energy datasets into the analyses that steer where infrastructure investment goes.",
+      "points": [
+        "Analyse large-scale geospatial and energy-access datasets to guide electrification and sustainable-development planning across underserved regions.",
+        "Run spatial and statistical analyses that feed infrastructure assessment and evidence-based investment decisions for funders and implementers.",
+        "Build GIS dashboards that sharpen tracking of project indicators, deployment progress, and development outcomes over time.",
+        "Produce research reports and visualizations used directly in energy-access planning and stakeholder engagement."
+      ]
+    },
+    {
+      "role": "Research Student — Predictive Grid Analytics",
+      "org": "Carnegie Mellon University Africa",
+      "location": "Kigali, Rwanda",
+      "dates": "Nov 2025 – Apr 2026",
+      "summary": "Applied machine learning and time-series methods to the operational behaviour of power grids, with an emphasis on reproducible pipelines.",
+      "points": [
+        "Applied machine learning and time-series methods to forecast demand, detect anomalies, and analyse grid behaviour.",
+        "Built automated pipelines to process and validate large operational datasets, improving reliability for downstream research."
+      ]
+    }
+  ]
+}
