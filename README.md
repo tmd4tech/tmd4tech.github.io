@@ -20,9 +20,10 @@ You do **not** build anything locally. GitHub does it for you.
 2. **Upload every file** in this folder to the repo (drag-and-drop in the GitHub web UI works, or use `git push`). Keep the folder structure intact — especially `.github/workflows/deploy.yml`.
 
 3. **Turn on Actions-based Pages.**
+   
    Repo → **Settings → Pages** → under *Build and deployment*, set **Source: GitHub Actions**. (Not "Deploy from a branch" — this project builds React, so it needs the Action.)
 
-4. **Wait ~2 minutes.** Repo → **Actions** tab shows the build running. When it's green, your site is live at your URL.
+5. **Wait ~2 minutes.** Repo → **Actions** tab shows the build running. When it's green, your site is live at your URL.
 
 That's it for the public site. Every future `git push` (or every admin save) rebuilds and redeploys automatically.
 
